@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Link} from "react-router-dom"
+import { HashRouter as Routes, Route, Link, HashRouter} from "react-router-dom"
 import Home from "./components/Home"
 import Posts from "./components/Posts"
 import Crypto from "./components/Crypto"
@@ -7,7 +7,7 @@ import "./App.css"
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <nav style={{ display: "flex", gap: "1rem" }}>
         <Link to="/">Home</Link>
         <Link to="/posts">Posts</Link>
@@ -21,6 +21,6 @@ export default function App() {
         <Route path="/crypto" element={<Crypto />} />
         <Route path="/dog" element={<Dog />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
